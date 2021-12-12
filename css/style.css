@@ -1,0 +1,552 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: lcucida sana;
+}
+.container{
+    width: 85%;
+    margin: auto;
+}
+            /* header */
+header{
+    padding: 20px 0;
+    background-color: #fff;
+    overflow: hidden;
+    position: relative;
+    border-bottom: 1px solid #000;
+}
+header .logo{
+    width: 50%;
+    float: left;
+}
+header .logo h2{
+    font-size: 30px;
+    font-weight: bold;
+}
+header input, header label{
+    position: absolute;
+    top: 13px;
+    right: 25px;
+}
+header input{
+    display: none;
+}
+header input:checked ~ ul {
+    display: block;
+}
+header input:checked ~ label {
+    background-image: url(../images/Navbar/close.png);
+    background-size: cover;
+}
+header label{
+    display: block;
+    width: 15px;
+    height: 15px;
+    background-image: url(../images/Navbar/open.png);
+    background-size: cover;
+    padding: 20px;
+    cursor: pointer;
+    background-repeat: no-repeat;
+}
+header ul{
+    width: 50%;
+    float: left;
+    list-style: none;
+}
+header ul li {
+    display: inline-block;
+}
+header ul li a{
+    display: block;
+    color: #222;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-weight: bold;
+}
+@media(min-width:992px){
+    header label{
+        display: none;
+    }
+}
+@media(max-width:991px){
+    header .logo, header ul{
+        width: 100%;
+        float: none;
+    }
+    header ul {
+        margin-top: 20px;
+        display: none;
+    }
+    header ul li {
+        display: block;
+        text-align: center;
+    }
+    header ul li a:hover {
+        color: #eb5424;
+    }
+}
+            /* home */
+section.home{
+    width: 100%;
+    height: 500px;
+    background-image: url(../images/Home/home-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    position: relative;
+}
+section.home .home-info{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+section.home .home-info h2{
+    font-size: 60px;
+    font-weight: bold;
+    color: #5e5e5e;
+    margin-bottom: 20px;
+}
+section.home .home-info h4{
+    font-size: 35px;
+    color: #eb5424;
+    margin-bottom: 20px;
+}
+section.home .home-info p {
+    font-size: 20px;
+    line-height: 1.5;
+    color: #888;
+    margin-bottom: 20px;
+}
+section.home .home-info button{
+    background-color: #eb5424;
+    color: #fff;
+    font-size: 18px;
+    width: 150px;
+    border: 0;
+    padding: 15px;
+    cursor: pointer;
+    font-weight: bold;
+}
+section.home .home-info button:hover{
+    background-color: #fff;
+    color: #eb5424;
+}
+@media(max-width:768px){
+    section.home .home-info h2{
+        font-size: 40px;
+    }
+    section.home .home-info h4{
+        font-size: 25px;
+    }
+    section.home .home-info p{
+        font-size: 15px;
+    }
+}
+        /* work */
+section.work{
+    height: auto;
+    padding: 50px 0;
+    background-color: #fff;
+    overflow: hidden;
+}
+section.work h2:nth-child(1){
+    font-size: 60px;
+}
+section.work h2 span{
+    font-weight: normal;
+}
+.work .part{
+    width: 30%;
+    height: auto;
+    margin-left: 5%;
+    float: left;
+    margin-top: 20px;
+    padding: 100px 0;
+    border: 1px solid #888;
+    text-align: center;
+}
+.work .part:first-of-type{
+    margin-left: 0;
+}
+section.work .part i{
+    color: #888;
+    margin-bottom: 20px;
+}
+section.work .part h4{
+    color: #eb5424;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+section.work .part hr{
+    width: 60%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+section.work .part p{
+    font-size: 14px;
+    color: #888;
+    padding: 20px;
+}
+@media(max-width:768px){
+    
+    section.work .part{
+        width: 47%;
+    }
+    section.work .part:last-of-type{
+        margin-left: 0;
+    }
+}
+@media(max-width:575px){
+    section.work h2:first-of-type{
+        margin-bottom: 4%;
+    }
+    section.work .part{
+        width: 100%;
+        float: none;
+        margin: 0;
+        margin-bottom: 5%;
+    }
+}
+            /* portfolio */
+section.portfolio{
+    background-color: #f8f8f8 ;
+    padding-top: 20px;
+    overflow: hidden;
+}
+section.portfolio h2{
+    text-align: center;
+    font-size: 35px;
+}
+section.portfolio h2 span{
+    font-weight: normal;
+}
+section.portfolio ul{
+    list-style: none;
+    text-align: center;
+    margin: 20px 0;
+}
+section.portfolio ul li{
+    display: inline-block;
+    width: 100px;
+    padding: 10px;
+}
+section.portfolio ul li:first-child{
+    background-color: #eb5424;
+    color: #fff;
+}
+section.portfolio .box div{
+    width: 25%;
+    float: left;
+    font-size: 0;
+    position: relative;
+}
+section.portfolio .box div:hover .overlay{
+    opacity: 1;
+}
+section.portfolio .box div img{
+    width: 100%;
+}
+section.portfolio .box div .overlay{
+    font-size: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(235, 84, 36, 0.4);
+    font-size: 15px;
+    opacity: 0;
+    transition: 0.5s;
+}
+section.portfolio .box div .overlay span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #fff;
+    display: block;
+    padding: 15px;
+    cursor: pointer;
+    border: 2px solid #eb5424;
+}
+@media(max-width:768px){
+    section.portfolio .box div{
+        width: 50%;
+
+    }
+}
+@media(max-width:575px){
+    section.portfolio ul li {
+        display: block;
+        margin: auto;
+    }
+    section.portfolio .box div{
+        width: 100%;
+        
+    }
+}
+        /* Profile + skill  */
+section.profile-skills{
+    overflow: hidden;
+    padding: 50px 0;
+}
+section.profile-skills .profile{
+    width: 50%;
+    float: left;
+}
+section.profile-skills .profile h2,
+section.profile-skills .skills h2
+{
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+section.profile-skills .profile h2 span,
+section.profile-skills .skills h2 span
+{
+    font-weight: normal;
+}
+section.profile-skills .profile ul{
+    list-style: none;
+}
+section.profile-skills .profile ul li {
+    margin-bottom: 8px;
+}
+section.profile-skills .profile ul li span{
+    display: inline-block;
+    width: 100px;
+    font-weight: bold;
+}
+section.profile-skills .profile ul li:last-child span:last-child{
+    color: #eb5424;
+    font-weight: normal;
+}
+section.profile-skills .skills{
+    width: 50%;
+    float: left;
+}
+section.profile-skills .skills p{
+    font-size: 15px;
+    color: #888;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+section.profile-skills .skills .bar{
+    margin-bottom: 10px;
+    overflow: hidden;
+    padding: 10px 0;
+}
+section.profile-skills .skills .bar span:first-of-type{
+    float: left;
+}
+section.profile-skills .skills .bar span:last-of-type{
+    float: right;
+    padding-right: 100px;
+}
+section.profile-skills .skills .bar div{
+    height: 2px;
+    background-color: #f8f8f8;
+    clear: both;
+    position: relative;
+    top: 5px;
+}
+section.profile-skills .skills .bar div span{
+    background-color: #eb5424;
+    position: absolute;
+    display: block;
+    height: 100%;
+}
+section.profile-skills .skills .bar:first-of-type div span{
+    width: 100%;
+}
+section.profile-skills .skills .bar:nth-of-type(2) div span{
+    width: 90%;
+}
+section.profile-skills .skills .bar:last-of-type div span{
+    width: 80%;
+}
+@media(max-width:575px){
+    section.profile-skills .profile,
+    section.profile-skills .skills{
+        width: 100%;
+        float: none;
+    }
+    section.profile-skills .profile{
+        margin-bottom: 20px;
+    }
+}
+            /* Creative */
+section.creative {
+    height: 500px;
+    background-image: url(../images/creative/about-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+section.creative .info{
+    padding-top: 100px;
+    width: 50%;
+    float: right;
+}
+section.creative .info h2{
+    font-weight: bold;
+    font-size: 50px;
+}
+section.creative .info h2 span{
+    font-weight: normal;
+}
+section.creative .info h4{
+    font-size: 40px;
+    color: #eb5424;
+    margin-bottom: 20px;
+}
+section.creative .info p{
+    color: #000;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+section.creative .info p a{
+    text-decoration: none;
+}
+@media(max-width:991px){
+    section.creative{
+        height: auto;
+    }
+    section.creative .info{
+        width: 100%;
+        float: none;
+        padding-top: 10px;
+    }
+    section.creative .info h4{
+        font-size: 30px;
+    }
+    
+}
+            /* Socials */
+.social-media {
+    height: auto;
+    overflow: hidden
+}
+.social-media .social {
+    width: 33.33%;
+    float: left;
+    padding: 100px 0 100px 60px
+}
+.social-media .social:first-child {
+    background: #3b5998;
+}
+.social-media .social:nth-child(2) {
+    background: #498cbf;
+}
+.social-media .social:last-child {
+    background: #cc2127;
+}
+.social-media .social i {
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    text-align: center;
+    line-height: 50px;
+    color: #888;
+    float: left;
+    margin-right: 10px
+}
+.social-media .social p {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 20px;
+    color: #fff
+}
+.social-media .social p span {
+    display: block;
+    margin-bottom: 8px
+}
+.social-media .social p span:last-child {
+    font-weight: normal
+}
+@media (max-width:991px) {
+    .social-media .social {
+        width: 100%;
+        float: none;
+    }
+}
+            /* drop */
+section.drop{
+    padding: 50px 0;
+    text-align: center;
+}
+section.drop h2{
+    font-size: 60px;
+    margin-bottom: 30px;
+}
+section.drop h2 span{
+    font-weight: normal;
+}
+section.drop form{
+    width: 70%;
+    margin: auto;
+}
+section.drop form input{
+    margin-bottom: 10px;
+    padding: 5px;
+    outline: 0;
+}
+section.drop form div{
+    overflow: hidden;
+}
+section.drop form div input{
+    width: 49%;
+}
+section.drop form div input[type=text]{
+    float: left;
+}
+section.drop form div input[type=email]{
+    float: right;
+}
+section.drop form input.sub{
+    width: 100%;
+}
+section.drop form textarea{
+    width: 100%;
+    background-color: #ccc;
+    outline: 0;
+}
+section.drop form input[type=submit]{
+    width: 60%;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+@media(max-width:575px){
+    section.drop h2{
+        font-size: 40px;
+    }
+    section.drop form{
+        width: 90%;
+    }
+    section.drop form div input{
+        width: 100%;
+    }
+}
+            /* footer */
+footer{
+    text-align: center;
+    padding: 10px 0;
+}
+footer p{
+    color: #888;
+}
+
+
+
+
+
+
+
+
+
+
+
